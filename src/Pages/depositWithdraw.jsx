@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import '../styles/deposit.css';
 
 function DepositWithdraw() {
   return (
