@@ -14,10 +14,23 @@ function Buy() {
     setAllStocks,
   } = useContext(AppContext);
   const [buyQuantity, setBuyQuantity] = useState('');
-  const navigate = useNavigate();
+  const [isAuthorized, setIsAuthorized] = useState(true);
 
+  const navigate = useNavigate();
   const goBack = () => {
     navigate('/acoes');
+  };
+
+  const authorizeTransaction = ({ id, valor }) => {
+    const inventory = parse('stocks');
+    const foundStock = inventory.find((el) => el.id === id);
+    if (foundStock.quantidade < (+buyQuantity)) {
+      return setIsAuthorized(false);
+    }
+    if (balance < +valor * +buyQuantity) {
+      return setIsAuthorized(false);
+    }
+    return setIsAuthorized(true);
   };
 
   const updateStock = (id, inventory) => {
@@ -96,6 +109,7 @@ function Buy() {
       </div>
       <div className="btn-input-container">
         <button
+          onClick={() => authorizeTransaction(selectedStock)}
           className="buy-btn"
           type="button"
         >
@@ -109,6 +123,8 @@ function Buy() {
           onChange={({ target: { value } }) => setBuyQuantity(value)}
         />
       </div>
+      {!isAuthorized
+        && <h2 className="notAutorized">Não é possível realizar essa transação, favor revisar os dados inseridos</h2>}
       <div className="goBack-btn-container">
         <button className="goBack-btn" type="button" onClick={goBack}>
           Voltar
