@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 function SellConfirmation({
   closeConfirmation,
@@ -7,6 +8,12 @@ function SellConfirmation({
   selectedStock,
   setSellQuantity,
 }) {
+  const navigate = useNavigate();
+  const goBack = () => {
+    setTimeout(() => {
+      navigate('/acoes');
+    }, 1);
+  };
   return (
     <div className="confirmation-background">
       <div className="confirmation-container">
@@ -27,6 +34,7 @@ function SellConfirmation({
             onClick={() => {
               sellStock(selectedStock);
               setSellQuantity('');
+              goBack();
             }}
           >
             Confirmar

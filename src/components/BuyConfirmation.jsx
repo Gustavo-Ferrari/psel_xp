@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 function BuyConfirmation({
   closeConfirmation,
   buyStock,
   selectedStock,
-
 }) {
+  const navigate = useNavigate();
+  const goBack = () => {
+    setTimeout(() => {
+      navigate('/acoes');
+    }, 1);
+  };
   return (
     <div className="confirmation-background">
       <div className="confirmation-container">
@@ -28,6 +34,7 @@ function BuyConfirmation({
             type="button"
             onClick={() => {
               buyStock(selectedStock);
+              goBack();
             }}
           >
             Confirmar
