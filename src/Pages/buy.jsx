@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Header from '../components/Header';
@@ -6,6 +6,7 @@ import AppContext from '../Context/AppContext';
 
 function Buy() {
   const { selectedStock } = useContext(AppContext);
+  const [buyQuantity, setBuyQuantity] = useState('');
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -47,6 +48,8 @@ function Buy() {
           className="buy-input"
           type="number"
           placeholder="Digite a quantidade"
+          value={buyQuantity}
+          onChange={({ target: { value } }) => setBuyQuantity(value)}
         />
       </div>
       <div className="goBack-btn-container">
