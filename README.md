@@ -11,6 +11,9 @@ Esse projeto foi construído com base no pensamento Mobile First, então as tela
 
   ➡️ Clone esse repositório:
     `git clone git@github.com:Gustavo-Ferrari/psel_xp.git`
+
+  ➡️ Entre no diretório destino do repositório:
+    `cd psel_xp`
   
   ➡️ Instale a dependências necessárias:
     `npm install`
