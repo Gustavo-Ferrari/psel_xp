@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import AppContext from './AppContext';
-import { parse } from '../helpers';
+import { parse, stringfy } from '../helpers';
+import stocksObj from '../stocksObj';
 
 function AppProvider({ children }) {
   const parsedBalance = parse('balance');
@@ -10,6 +11,18 @@ function AppProvider({ children }) {
 
   const [openCloseEye, setOpenCloseEye] = useState(true);
 
+  const [allStocks, setAllStocks] = useState([]);
+
+  useEffect(() => {
+    const stocks = parse('stocks');
+    if (stocks) {
+      setAllStocks(stocks);
+    } else {
+      setAllStocks(stocksObj);
+      stringfy('stocks', stocksObj);
+    }
+  }, []);
+
   const VALUE = useMemo(
     () => ({
       balance,
@@ -17,6 +30,8 @@ function AppProvider({ children }) {
       parsedBalance,
       openCloseEye,
       setOpenCloseEye,
+      allStocks,
+      setAllStocks,
     }),
     [
       balance,
@@ -24,6 +39,8 @@ function AppProvider({ children }) {
       parsedBalance,
       openCloseEye,
       setOpenCloseEye,
+      allStocks,
+      setAllStocks,
     ],
   );
 
