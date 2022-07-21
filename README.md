@@ -15,7 +15,7 @@ Esse projeto foi construído com base no pensamento Mobile First, então as tela
   ➡️ Instale a dependências necessárias:
     `npm install`
 
-  ➡️ Execute a applicação:
+  ➡️ Execute a aplicação:
     `npm start`
 
 </details>
