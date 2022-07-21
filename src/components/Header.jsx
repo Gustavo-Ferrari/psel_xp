@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppContext from '../Context/AppContext';
 import XPlogo from '../images/xp-logo.png';
+import '../styles/header.css';
 
 function Header() {
   const {

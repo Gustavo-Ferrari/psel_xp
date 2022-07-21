@@ -1,0 +1,56 @@
+.header-container {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.xp-logo-header {
+  width: 5em;
+  height: auto;
+  transition: .5s;
+}
+
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  padding: .5em;
+  align-items: center;
+}
+
+.user-p {
+  border-radius: .5em;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: white;
+  padding: .5em;
+
+}
+
+.balance-container {
+  padding: 1em;
+  background-color: grey;
+  margin-bottom: 1em;
+}
+
+.balance-p {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.eye-btn-container {
+  text-align: right;
+}
+
+.eye-btn {
+  border-radius: .5em;
+}
+
+@media (max-width: 450px) {
+  .xp-logo-header{
+    width: 2em;
+    height: auto;
+  }
+  }
