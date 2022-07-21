@@ -54,10 +54,3 @@
     box-shadow: 0 .1rem #666;
     transform: translateY(.1em);
   }
-
-@media (min-width: 1900px) {
-  .confirmation-background {
-    width: 50vw; 
-    margin: 14em 0em 0em 40em ;
-  }
-}
