@@ -5,6 +5,7 @@ import {
   Stocks,
   DepositWithdraw,
   Buy,
+  Sell,
 } from './Pages';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/acoes" element={<Stocks />} />
       <Route path="/deposito" element={<DepositWithdraw />} />
       <Route path="/comprar" element={<Buy />} />
+      <Route path="/vender" element={<Sell />} />
     </Routes>
   );
 }
