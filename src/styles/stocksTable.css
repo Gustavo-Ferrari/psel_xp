@@ -119,7 +119,7 @@ html {
   border-radius: 1em;
   color: white;
   background-color: black;
-  box-shadow: 0 .2em #999;
+  box-shadow: .2em .2em #999;
 }
 
 .deposit-withdraw-btn:active {
