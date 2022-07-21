@@ -53,6 +53,7 @@ function DepositWithdraw() {
           value={addBalance}
           placeholder="Informe o valor"
           type="number"
+          min={0}
           onChange={({ target: { value } }) => setAddBalance(value)}
         />
       </div>
