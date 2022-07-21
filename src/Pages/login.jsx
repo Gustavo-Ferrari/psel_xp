@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import XPlogo from '../images/xp-logo.png';
 import loginData from '../validations/loginValidation';
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isDisabled, setIsDisabled] = useState(true);
@@ -20,11 +23,26 @@ function Login() {
     validateLogin();
   }, [email, password]);
 
+  useEffect(() => {
+    const lastEmail = localStorage.getItem('email');
+    if (lastEmail) {
+      setEmail(lastEmail);
+    }
+  }, []);
+
+  const loginButtonFunc = (e) => {
+    e.preventDefault();
+    localStorage.setItem('email', email);
+    localStorage.setItem('lastLogin', new Date());
+    navigate('/acoes');
+  };
+
   return (
-    <form>
+    <form onSubmit={loginButtonFunc}>
       <div className="main-container">
         <div className="login-container">
           <div className="login-card">
+            <img className="xp-logo" src={XPlogo} alt="xp-logo" />
             <label htmlFor="email">
               <input
                 className="email-input"
@@ -50,8 +68,9 @@ function Login() {
             <div>
               <button
                 className="login-btn"
-                name="login-button"
+                onClick={loginButtonFunc}
                 disabled={isDisabled}
+                name="login-button"
                 type="submit"
               >
                 Acessar
