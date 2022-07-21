@@ -1,0 +1,10 @@
+README.md
+renderWithRouter.js
+package.json
+package-lock.json
+node_modules
+build
+coverage
+.eslintrc.json
+# ignora a pasta de testes
+src/test
