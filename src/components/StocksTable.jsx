@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-
+import '../styles/stocksTable.css';
 import AppContext from '../Context/AppContext';
 
 function StocksTable({ stocks, isDisabled, isVisible }) {
