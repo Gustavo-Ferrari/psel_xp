@@ -13,6 +13,7 @@ function AppProvider({ children }) {
   const [openCloseEye, setOpenCloseEye] = useState(true);
   const [allStocks, setAllStocks] = useState([]);
   const [selectedStock, setSelectedStock] = useState({});
+  const [addBalance, setAddBalance] = useState('');
 
   useEffect(() => {
     const stocks = parse('stocks');
@@ -42,6 +43,8 @@ function AppProvider({ children }) {
       setSelectedStock,
       myStocks,
       setMyStocks,
+      addBalance,
+      setAddBalance,
     }),
     [
       balance,
@@ -55,6 +58,8 @@ function AppProvider({ children }) {
       setSelectedStock,
       myStocks,
       setMyStocks,
+      addBalance,
+      setAddBalance,
     ],
   );
 
