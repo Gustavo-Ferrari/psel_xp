@@ -47,19 +47,3 @@
   padding: .5em;
   text-align: center;
 }
-
-.goBack-btn-container {
-  display: flex;
-  justify-content: center;
-}
-
-.goBack-btn {
-  font-size: medium;
-  padding: 1em;
-  width: 7em;
-  border-radius: .5em;
-  color: white;
-  background-color: black;
-  box-shadow: 0 .2em #999;
-  margin-top: 10em;
-}
