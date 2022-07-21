@@ -8,7 +8,6 @@
 .xp-logo-header {
   width: 5em;
   height: auto;
-  transition: .5s;
 }
 
 .user-container {
@@ -20,12 +19,12 @@
 }
 
 .user-p {
+  width: fit-content;
   border-radius: .5em;
   font-size: 1em;
   font-weight: bold;
   background-color: white;
   padding: .5em;
-
 }
 
 .balance-container {
@@ -38,6 +37,7 @@
   text-align: center;
   font-size: 1.2em;
   font-weight:bold;
+  text-decoration: underline;
 }
 
 .eye-btn-container {
@@ -46,11 +46,34 @@
 
 .eye-btn {
   border-radius: .5em;
+  background-color: #ffc709;
 }
 
 @media (max-width: 450px) {
   .xp-logo-header{
-    width: 2em;
+    width: 2.3em;
     height: auto;
   }
+  .user-p {
+    width: fit-content;
+    font-size: small;
   }
+  }
+
+@media (min-width: 2048px) {
+  .user-p {
+    padding: 1em;
+    font-size: x-large;
+  }
+  .balance-p {
+    font-size: xx-large;
+  }
+  .eye-btn-container {
+    margin-right: 2em;
+  }
+  .eye-btn {
+    width: 5em;
+    height: 3em;
+    font-size: medium;
+  }
+}
