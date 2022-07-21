@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import BuyConfirmation from '../components/BuyConfirmation';
 import Header from '../components/Header';
 import AppContext from '../Context/AppContext';
 import { parse, stringfy } from '../helpers';
@@ -11,15 +11,14 @@ function Buy() {
     setMyStocks,
     balance,
     setBalance,
+    openConfirmation,
+    setOpenConfirmation,
     setAllStocks,
   } = useContext(AppContext);
+
   const [buyQuantity, setBuyQuantity] = useState('');
   const [isAuthorized, setIsAuthorized] = useState(true);
-
   const navigate = useNavigate();
-  const goBack = () => {
-    navigate('/acoes');
-  };
 
   const authorizeTransaction = ({ id, valor }) => {
     const inventory = parse('stocks');
@@ -81,8 +80,12 @@ function Buy() {
         },
       ];
     });
+    setOpenConfirmation(!openConfirmation);
   };
 
+  const goBack = () => {
+    navigate('/acoes');
+  };
   return (
     <div>
       <Header />
@@ -109,18 +112,21 @@ function Buy() {
       </div>
       <div className="btn-input-container">
         <button
-          onClick={() => authorizeTransaction(selectedStock)}
           className="buy-btn"
           type="button"
+          onClick={() => {
+            setOpenConfirmation(!openConfirmation);
+            authorizeTransaction(selectedStock);
+          }}
         >
           Comprar
         </button>
         <input
           className="buy-input"
-          type="number"
-          placeholder="Digite a quantidade"
           value={buyQuantity}
           onChange={({ target: { value } }) => setBuyQuantity(value)}
+          type="number"
+          placeholder="Digite a quantidade"
         />
       </div>
       {!isAuthorized
@@ -129,6 +135,16 @@ function Buy() {
         <button className="goBack-btn" type="button" onClick={goBack}>
           Voltar
         </button>
+      </div>
+      <div>
+        {openConfirmation && buyQuantity && isAuthorized && (
+          <BuyConfirmation
+            updateStock={updateStock}
+            closeConfirmation={setOpenConfirmation}
+            buyStock={buyStock}
+            selectedStock={selectedStock}
+          />
+        )}
       </div>
     </div>
   );
