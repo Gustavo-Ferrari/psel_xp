@@ -37,14 +37,13 @@ html {
 }
 
 .table-body td{
-  width: fit-content;
+  width: max-content;
 }
 
 .table-btns-container {
   border-radius: 2em;
   width: 4em;
   height: auto;
-  padding: 0.1em;
   transition: .1s;
 }
 
@@ -91,20 +90,19 @@ html {
 }
 
 .action-name {
-  border-radius: 2em;
+  border-radius: 1em;
   background-color: #ffc709;
+  font-weight: bold;
 }
 .action-qtd {
-  width: 2em;
-  border-radius: .8em;
+  border-radius: 1em;
   background-color: rgb(95, 93, 93);
   color: white;
 }
 .action-value {
   color: white;
   font-weight: bold;
-  width: 2em;
-  border-radius: 2em;
+  border-radius: 1em;
   background-color: black;
 }
 
@@ -150,5 +148,17 @@ html {
     width: 1.5em;
     height: auto;
     padding: 0.1em;
+  }
+  .action-qtd {
+    border-radius: .8em;
+  }
+}
+
+@media (min-width: 2048px) {
+  .deposit-withdraw-btn {
+    padding: 2em;
+    width: 17em;
+    height: auto;
+    margin-bottom: 1em;
   }
 }
