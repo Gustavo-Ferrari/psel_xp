@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import AppContext from '../Context/AppContext';
+import '../styles/confirmation.css';
 
 function DepositConfirmation({ closeConfirmation, withdraw }) {
   const { setAddBalance } = useContext(AppContext);
