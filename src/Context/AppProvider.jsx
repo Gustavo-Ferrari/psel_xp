@@ -5,20 +5,25 @@ import { parse } from '../helpers';
 
 function AppProvider({ children }) {
   const parsedBalance = parse('balance');
-
   const [balance, setBalance] = useState(0 || parsedBalance);
   localStorage.setItem('balance', balance || 0);
+
+  const [openCloseEye, setOpenCloseEye] = useState(true);
 
   const VALUE = useMemo(
     () => ({
       balance,
       setBalance,
       parsedBalance,
+      openCloseEye,
+      setOpenCloseEye,
     }),
     [
       balance,
       setBalance,
       parsedBalance,
+      openCloseEye,
+      setOpenCloseEye,
     ],
   );
 
