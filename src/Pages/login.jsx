@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/login.css';
 import XPlogo from '../images/xp-logo.png';
 import loginData from '../validations/loginValidation';
 
