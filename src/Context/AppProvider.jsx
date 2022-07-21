@@ -9,9 +9,10 @@ function AppProvider({ children }) {
   const [balance, setBalance] = useState(0 || parsedBalance);
   localStorage.setItem('balance', balance || 0);
 
+  const [myStocks, setMyStocks] = useState(parse('myStocks') || []);
   const [openCloseEye, setOpenCloseEye] = useState(true);
-
   const [allStocks, setAllStocks] = useState([]);
+  const [selectedStock, setSelectedStock] = useState({});
 
   useEffect(() => {
     const stocks = parse('stocks');
@@ -23,7 +24,10 @@ function AppProvider({ children }) {
     }
   }, []);
 
-  const [selectedStock, setSelectedStock] = useState({});
+  useEffect(() => {
+    setMyStocks(myStocks);
+    stringfy('myStocks', myStocks);
+  }, [setMyStocks, myStocks]);
 
   const VALUE = useMemo(
     () => ({
@@ -36,6 +40,8 @@ function AppProvider({ children }) {
       setAllStocks,
       selectedStock,
       setSelectedStock,
+      myStocks,
+      setMyStocks,
     }),
     [
       balance,
@@ -47,6 +53,8 @@ function AppProvider({ children }) {
       setAllStocks,
       selectedStock,
       setSelectedStock,
+      myStocks,
+      setMyStocks,
     ],
   );
 
