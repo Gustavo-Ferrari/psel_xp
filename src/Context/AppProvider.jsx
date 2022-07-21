@@ -14,6 +14,8 @@ function AppProvider({ children }) {
   const [allStocks, setAllStocks] = useState([]);
   const [selectedStock, setSelectedStock] = useState({});
   const [addBalance, setAddBalance] = useState('');
+  const [openConfirmation, setOpenConfirmation] = useState(false);
+  const [openWithdrawConfirmation, setOpenWithdrawConfirmation] = useState(false);
 
   useEffect(() => {
     const stocks = parse('stocks');
@@ -45,6 +47,10 @@ function AppProvider({ children }) {
       setMyStocks,
       addBalance,
       setAddBalance,
+      openConfirmation,
+      setOpenConfirmation,
+      openWithdrawConfirmation,
+      setOpenWithdrawConfirmation,
     }),
     [
       balance,
@@ -60,6 +66,10 @@ function AppProvider({ children }) {
       setMyStocks,
       addBalance,
       setAddBalance,
+      openConfirmation,
+      setOpenConfirmation,
+      openWithdrawConfirmation,
+      setOpenWithdrawConfirmation,
     ],
   );
 
