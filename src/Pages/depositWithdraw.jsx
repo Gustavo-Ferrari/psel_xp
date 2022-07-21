@@ -51,7 +51,7 @@ function DepositWithdraw() {
         <input
           className="deposit-input"
           value={addBalance}
-          placeholder="Informe o valor"
+          placeholder="Insira o valor e selecione a operação"
           type="number"
           min={0}
           onChange={({ target: { value } }) => setAddBalance(value)}
