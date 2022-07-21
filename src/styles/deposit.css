@@ -17,7 +17,11 @@
 }
 .deposit-btn:disabled {
   background-color: lightgray;
-  
+}
+
+.deposit-btn:active:enabled {
+  box-shadow: 0 .1rem #666;
+  transform: translateY(.1em);
 }
 
 .withdraw-btn {
@@ -31,6 +35,11 @@
 
 .withdraw-btn:disabled {
   background-color: lightgray;
+}
+
+.withdraw-btn:active:enabled {
+  box-shadow: 0 .1rem #666;
+  transform: translateY(.1em);
 }
 
 .deposit-input-container {
@@ -47,3 +56,29 @@
   padding: .5em;
   text-align: center;
 }
+
+@media (min-width: 2048px) {
+  .deposit-btn-container {
+    margin-top: 3em;
+  }
+
+  .deposit-btn {
+    font-size: x-large;
+    width: 10em;
+    height: auto;
+    box-shadow: .2em .2em #666;
+  }
+
+  .withdraw-btn {
+    font-size: x-large;
+    width: 10em;
+    height: auto;
+    box-shadow: .2em .2em #666;
+  }
+
+  .deposit-input {
+    font-size: x-large;
+    width: 20em;
+    height: auto;
+  }
+  }
