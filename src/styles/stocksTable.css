@@ -154,7 +154,7 @@ html {
   }
 }
 
-@media (min-width: 2048px) {
+@media (min-width: 1900px) {
   .deposit-withdraw-btn {
     padding: 2em;
     width: 17em;

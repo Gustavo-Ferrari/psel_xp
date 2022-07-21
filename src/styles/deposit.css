@@ -57,7 +57,7 @@
   text-align: center;
 }
 
-@media (min-width: 2048px) {
+@media (min-width: 1900px) {
   .deposit-btn-container {
     margin-top: 3em;
   }

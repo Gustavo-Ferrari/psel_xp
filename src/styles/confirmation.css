@@ -55,7 +55,7 @@
     transform: translateY(.1em);
   }
 
-@media (min-width: 2048px) {
+@media (min-width: 1900px) {
   .confirmation-background {
     width: 50vw; 
     margin: 14em 0em 0em 40em ;
