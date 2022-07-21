@@ -4,6 +4,7 @@ import BuyConfirmation from '../components/BuyConfirmation';
 import Header from '../components/Header';
 import AppContext from '../Context/AppContext';
 import { parse, stringfy } from '../helpers';
+import '../styles/buySellTable.css';
 
 function Buy() {
   const {

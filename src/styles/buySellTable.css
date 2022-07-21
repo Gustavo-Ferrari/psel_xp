@@ -1,0 +1,102 @@
+.stock-name {
+  background-color: #ffc709;
+  border-radius: 2em;
+  padding: .1em;
+}
+.stock-qtd {
+  background-color: rgb(95, 93, 93);
+  border-radius: 2em;
+  color: white;
+}
+.stock-value {
+  padding: .2em;
+  background-color: black;
+  border-radius: 2em;
+  color: white;
+}
+
+.btn-input-container {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.buy-btn {
+  padding: 1em;
+  background-color: blue;
+  border-radius: .5em;
+  color: white;
+}
+
+.buy-input {
+  border-radius: .5em;
+  text-align: center;
+}
+
+.goBack-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.goBack-btn {
+  font-size: medium;
+  padding: 1em;
+  width: 7em;
+  border-radius: .5em;
+  color: white;
+  background-color: black;
+  box-shadow: 0 .2em #999;
+  margin-top: 10em;
+}
+
+.goBack-btn:active {
+  box-shadow: 0 .1rem #666;
+  transform: translateY(.1em);
+}
+
+.sell-btn {
+  padding: 1em;
+  background-color: green;
+  border-radius: .5em;
+  color: white;
+}
+
+.sell-input {
+  border-radius: .5em;
+  text-align: center;
+}
+
+.notAutorized {
+  color: red;
+  text-align: center;
+  border: none;
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: .5em;
+  box-shadow: .2em .2em #666;
+  padding: .5em;
+}
+
+@media (min-width: 768px) {
+  .goBack-btn {
+    margin-top: 5em;
+    font-size: x-large;
+    width: 15em;
+    height: 5em;
+  }
+  .btn-input-container {
+    margin-top: 3em;
+  }
+  .buy-btn {
+    font-size: x-large;
+    width: 10em;
+    height: auto;
+  }
+  .buy-input {
+    font-size: x-large;
+    width: 20em;
+    height: auto;
+  }
+}
