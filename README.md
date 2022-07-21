@@ -6,6 +6,19 @@ Esse projeto foi construído com base no pensamento Mobile First, então as tela
 
 ## Para acessar a aplicação, simplesmente clique [AQUI](http://www.wikipedia.org/wiki/) !! 😄
 
+<details>
+  <summary><strong>Caso queira baixar o repositório em sua máquina local e iniciá-la localmente, siga os passos abaixo:</strong></summary><br />
+
+  ➡️ Clone esse repositório:
+    `git clone git@github.com:Gustavo-Ferrari/psel_xp.git`
+  
+  ➡️ Instale a dependências necessárias:
+    `npm install`
+
+  ➡️ Execute a applicação:
+    `npm start`
+
+</details>
 
 ## Decisões durante o desenvolvimento
 
