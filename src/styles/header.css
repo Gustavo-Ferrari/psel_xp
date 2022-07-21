@@ -25,6 +25,7 @@
   font-weight: bold;
   background-color: white;
   padding: .5em;
+  box-shadow: .1em .1em #999;
 }
 
 .balance-container {
@@ -34,10 +35,16 @@
 }
 
 .balance-p {
+  width: fit-content;
+  margin: 0 auto;
   text-align: center;
   font-size: 1.2em;
   font-weight:bold;
   text-decoration: underline;
+  border: 1px solid;
+  border-radius: .3em;
+  padding: .2em;
+  box-shadow: .1em .1em #666;
 }
 
 .eye-btn-container {
@@ -47,6 +54,12 @@
 .eye-btn {
   border-radius: .5em;
   background-color: #ffc709;
+  box-shadow: .2em .2em #666;
+}
+
+.eye-btn:active {
+  box-shadow: 0 .1rem #666;
+  transform: translateY(.1em);
 }
 
 @media (max-width: 450px) {
@@ -73,7 +86,7 @@
   }
   .eye-btn {
     width: 5em;
-    height: 3em;
+    height: 2em;
     font-size: medium;
   }
 }
