@@ -76,8 +76,8 @@ As decisões de lógica de programação tomadas para realização deste projeto
   <summary><strong>Criação de um array de objetos com as ações disponíveis</strong></summary><br />
   
    ➡️ Uma vez decidido que iria usar o *Local Storage* e o *Estado Centralizadodo* do [REACT](https://pt-br.reactjs.org/)
-  para poder trabalhar com as ações disponíveis para compra, busquei por ações recomendadas em uma carteira 
-  automatizada da XP, em JULHO/2022.
+  para poder trabalhar com as ações disponíveis para compra, busquei por ações recomendadas no período de
+  construção desta aplicação [neste link](https://investnews.com.br/financas/melhores-acoes-de-2022-acumulado-junho/)
 
    ➡️ Criei um array de objetos contendo essas ações. 
   Após fazer o login, os dados desse array são enviados para o localStorage e para o estado centralizado, 
