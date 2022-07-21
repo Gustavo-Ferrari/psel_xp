@@ -4,7 +4,7 @@ Essa aplicação foi desenvolvida por Gustavo Ferrari 🧑‍💻
 
 Esse projeto foi construído com base no pensamento Mobile First, então as telas ficam ~~ainda~~ mais bonitas quando em resolução que simulam um celular 📱
 
-## Para acessar a aplicação, simplesmente clique [AQUI](http://www.wikipedia.org/wiki/) !! 😄
+## Para acessar a aplicação, simplesmente clique [AQUI](https://psel-xp.vercel.app/) !! 😄
 
 <details>
   <summary><strong>Caso queira baixar o repositório em sua máquina local e iniciá-la localmente, siga os passos abaixo:</strong></summary><br />

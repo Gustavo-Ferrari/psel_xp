@@ -32,7 +32,7 @@ function Header() {
         {openCloseEye && (
           <p className="balance-p">
             {parsedBalance === null
-              ? 'Saldo em conta: 0'
+              ? 'Saldo em conta: R$ 0'
               : `Saldo em conta: ${toBRL}`}
           </p>
         )}
