@@ -1,6 +1,6 @@
 .confirmation-background {
   position: fixed;
-  margin-top: 8em;
+  margin-top: 10em;
   top: 0;
   border: 2px solid black;
   border-radius: 2em;
@@ -30,7 +30,13 @@
   background-color: rgb(244, 40, 40);
   font-size: 1em;
   font-weight: bold;
-  color: white
+  color: white;
+  box-shadow: .2em .2em #333;
+}
+
+.confirmation-cancel-btn:active {
+  box-shadow: 0 .1rem #666;
+  transform: translateY(.1em);
 }
 
 .confirmation-confirm-btn {
@@ -41,6 +47,17 @@
   background-color: blue;
   font-weight: bold;
   color: white;
+  box-shadow: .2em .2em #333;
   }
 
+.confirmation-confirm-btn:active {
+    box-shadow: 0 .1rem #666;
+    transform: translateY(.1em);
+  }
 
+@media (min-width: 2048px) {
+  .confirmation-background {
+    width: 50vw; 
+    margin: 14em 0em 0em 40em ;
+  }
+}

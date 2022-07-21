@@ -58,7 +58,7 @@
 }
 
 .eye-btn:active {
-  box-shadow: 0 .1rem #666;
+  box-shadow: .1 .1rem #666;
   transform: translateY(.1em);
 }
 
