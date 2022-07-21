@@ -1,10 +1,21 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/stocksTable.css';
+import { useNavigate } from 'react-router-dom';
 import AppContext from '../Context/AppContext';
+import '../styles/stocksTable.css';
 
 function StocksTable({ stocks, isDisabled, isVisible }) {
-  const { balance } = useContext(AppContext);
+  const navigate = useNavigate();
+  const { setSelectedStock, balance } = useContext(AppContext);
+
+  const buy = (stock) => {
+    setSelectedStock(stock);
+    navigate('/comprar');
+  };
+  const sell = (stock) => {
+    setSelectedStock(stock);
+    navigate('/vender');
+  };
 
   return (
     <>
@@ -29,6 +40,7 @@ function StocksTable({ stocks, isDisabled, isVisible }) {
                     type="button"
                     className="table-buy-btn"
                     disabled={balance < stock.valor}
+                    onClick={() => buy(stock)}
                   >
                     C
                   </button>
@@ -36,6 +48,7 @@ function StocksTable({ stocks, isDisabled, isVisible }) {
                     type="button"
                     className="table-sell-btn"
                     disabled={isDisabled}
+                    onClick={() => sell(stock)}
                   >
                     V
                   </button>
@@ -50,6 +63,7 @@ function StocksTable({ stocks, isDisabled, isVisible }) {
           className="deposit-withdraw-btn"
           type="button"
           style={{ display: isVisible }}
+          onClick={() => navigate('/deposito')}
         >
           Depósito/Retirada
         </button>

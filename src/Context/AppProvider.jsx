@@ -23,6 +23,8 @@ function AppProvider({ children }) {
     }
   }, []);
 
+  const [selectedStock, setSelectedStock] = useState({});
+
   const VALUE = useMemo(
     () => ({
       balance,
@@ -32,6 +34,8 @@ function AppProvider({ children }) {
       setOpenCloseEye,
       allStocks,
       setAllStocks,
+      selectedStock,
+      setSelectedStock,
     }),
     [
       balance,
@@ -41,6 +45,8 @@ function AppProvider({ children }) {
       setOpenCloseEye,
       allStocks,
       setAllStocks,
+      selectedStock,
+      setSelectedStock,
     ],
   );
 
