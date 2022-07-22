@@ -1,8 +1,10 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { act } from 'react-dom/test-utils';
 import renderWithRouter from '../../renderWithRouter';
-import { Login } from '../Pages';
+import { Login, Stocks } from '../Pages';
+import App from '../App'
+import context from './context'
+import AppContext from '../Context/AppContext'
 
 describe('Verifica os atributos da tela de login', () => {
   it('Verifica se o input e-mail está na tela', () => {
@@ -35,8 +37,8 @@ describe('Verifica os atributos da tela de login', () => {
     expect(button).toBeEnabled();
   });
 
-  it('Verifica o salvamento no localStorage após click no botão', async () => {
-    Render();
+  it('Verifica o salvamento no localStorage e redirecionamento após click no botão', async () => {
+    renderApp();
     const {
       emailInput, typedEmail, passwordInput, typedPassword,
     } = loginCredentials();
@@ -50,6 +52,8 @@ describe('Verifica os atributos da tela de login', () => {
     expect(email).toEqual(typedEmail);
     const lastLogin = localStorage.getItem('lastLogin');
     expect(lastLogin).toBeTruthy();
+    const saldo = screen.getByRole('heading', {level: 1, name: /saldo/i});
+    expect(saldo).toBeInTheDocument()
   });
 });
 
@@ -64,3 +68,11 @@ const loginCredentials = () => ({
 const Render = () => {
   renderWithRouter(<Login />);
 };
+
+const renderApp = () => {
+  renderWithRouter(
+  <AppContext.Provider value={context}>
+    <App />
+  </AppContext.Provider>
+  )
+}
