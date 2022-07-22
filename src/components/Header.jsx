@@ -30,11 +30,11 @@ function Header() {
           </button>
         </div>
         {openCloseEye && (
-          <p className="balance-p">
+          <h1 className="balance-p">
             {parsedBalance === null
               ? 'Saldo em conta: R$ 0'
               : `Saldo em conta: ${toBRL}`}
-          </p>
+          </h1>
         )}
       </div>
     </div>

@@ -62,7 +62,6 @@ const loginCredentials = () => ({
   typedPassword: '12345678',
   emailInput: screen.getByRole('textbox'),
   passwordInput: screen.getByPlaceholderText('Senha (8 digitos)'),
-  button: screen.findByRole('button'),
 });
 
 const Render = () => {

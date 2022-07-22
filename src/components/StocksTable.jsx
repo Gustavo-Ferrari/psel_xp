@@ -45,6 +45,7 @@ function StocksTable({ stocks, isDisabled, isVisible }) {
                     C
                   </button>
                   <button
+                    data-testid={stock.id}
                     type="button"
                     className="table-sell-btn"
                     disabled={isDisabled}
@@ -77,10 +78,11 @@ export default StocksTable;
 StocksTable.propTypes = {
   stocks: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.number,
     }),
-  ).isRequired,
+  ),
   isDisabled: PropTypes.bool.isRequired,
   isVisible: PropTypes.string,
 };
+StocksTable.defaultProps = { stocks: [] };
 StocksTable.defaultProps = { isVisible: '' };

@@ -7,7 +7,7 @@ function MyStocks() {
   const [isDisabled] = useState(false);
   return (
     <div>
-      <h1 style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}>Minhas Ações</h1>
+      <h1 name="myStocks" style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}>Minhas Ações</h1>
       <StocksTable stocks={stocks} isVisible="none" isDisabled={isDisabled} />
     </div>
   );
