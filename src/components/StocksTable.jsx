@@ -37,6 +37,7 @@ function StocksTable({ stocks, isDisabled, isVisible }) {
                 <td className="action-value">{stock.valor}</td>
                 <td className="table-btns-container">
                   <button
+                    data-testid={stock.id}
                     type="button"
                     className="table-buy-btn"
                     disabled={balance < stock.valor}
@@ -45,7 +46,6 @@ function StocksTable({ stocks, isDisabled, isVisible }) {
                     C
                   </button>
                   <button
-                    data-testid={stock.id}
                     type="button"
                     className="table-sell-btn"
                     disabled={isDisabled}
