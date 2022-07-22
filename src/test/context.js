@@ -1,7 +1,7 @@
 const context = {
   addBalance: '',
   allStocks: [
-    { id: 1, nome: 'CIEL3', quantidade: 999, valor: 69.98 },
+    { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 },
     { id: 2, nome: 'HYPE3', quantidade: 1000, valor: 35.99 },
     { id: 4, nome: 'SLCE3', quantidade: 1000, valor: 34.64 },
     { id: 5, nome: 'ELET6', quantidade: 1000, valor: 33.51 },
@@ -16,8 +16,12 @@ const context = {
   openConfirmation: false,
   openWithdrawConfirmation: false,
   parsedBalance: 1000,
-  selectedStock: { id: 1, nome: 'CIEL3', quantidade: 999, valor: 69.98 },
-  stocks: { id: 1, nome: 'CIEL3', quantidade: 999, valor: 69.98 }
+  setSelectedStock: () => {
+    return { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 }
+  },
+  setOpenConfirmation: () => true,
+  selectedStock: { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 },
+  stocks: { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 }
 };
 
 export default context;
