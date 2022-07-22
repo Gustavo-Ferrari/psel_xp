@@ -91,7 +91,7 @@ function Buy() {
     <div>
       <Header />
       <div>
-        <h1>Comprar/Vender Ação</h1>
+        <h1 style={{ textAlign: 'center' }}>Comprar/Vender Ação</h1>
         <div className="table-container">
           <table className="table">
             <thead>
