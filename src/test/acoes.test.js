@@ -1,7 +1,5 @@
 import { screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../../renderWithRouter';
-import App from '../App';
 import context from './context';
 import AppContext from '../Context/AppContext';
 import { Stocks, Buy } from '../Pages';
