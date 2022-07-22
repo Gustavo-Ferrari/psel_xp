@@ -35,20 +35,22 @@ describe('Verifica os atributos da tela de login', () => {
     expect(button).toBeEnabled();
   });
 
-  // it('Verifica o salvamento no localStorage após click no botão', () => {
-  //   Render();
-  //   const {
-  //     emailInput, typedEmail, passwordInput, typedPassword, button,
-  //   } = loginCredentials();
+  it('Verifica o salvamento no localStorage após click no botão', async () => {
+    Render();
+    const {
+      emailInput, typedEmail, passwordInput, typedPassword,
+    } = loginCredentials();
 
-  //   userEvent.type(emailInput, typedEmail);
-  //   userEvent.type(passwordInput, typedPassword);
-  //   expect(button).toBeEnabled();
-  //   userEvent.click(button);
-  //   const email = Object.values(localStorage);
-  //   expect(Object.keys(localStorage)).toEqual(['email']);
-  //   expect(email).toEqual([typedEmail]);
-  // });
+    await userEvent.type(emailInput, typedEmail);
+    await userEvent.type(passwordInput, typedPassword);
+    const button = screen.getByRole('button')
+    expect(button).toBeEnabled();
+    await userEvent.click(button);
+    const email = localStorage.getItem('email');
+    expect(email).toEqual(typedEmail);
+    const lastLogin = localStorage.getItem('lastLogin');
+    expect(lastLogin).toBeTruthy();
+  });
 });
 
 const loginCredentials = () => ({
