@@ -57,6 +57,11 @@
   text-align: center;
 }
 
+.input-text {
+  text-align: center;
+  text-decoration: underline;
+}
+
 @media (min-width: 1900px) {
   .deposit-btn-container {
     margin-top: 3em;
@@ -81,5 +86,9 @@
     width: 20em;
     height: auto;
     margin-top: 5em;
+  }
+
+  .input-text {
+    font-size: x-large;
   }
   }

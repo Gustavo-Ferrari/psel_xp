@@ -51,12 +51,13 @@ function DepositWithdraw() {
         <input
           className="deposit-input"
           value={addBalance}
-          placeholder="Insira o valor e selecione a operação"
+          placeholder="Insira o valor"
           type="number"
           min={0}
           onChange={({ target: { value } }) => setAddBalance(value)}
         />
       </div>
+      <p className="input-text">Insira o valor e selecione a operação</p>
       <div className="goBack-btn-container">
         <button className="goBack-btn" type="button" onClick={() => navigate('/acoes')}>Voltar</button>
       </div>

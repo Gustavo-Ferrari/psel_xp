@@ -33,7 +33,7 @@ const stocksObj = [
     id: 6,
     nome: 'BBSE3',
     quantidade: 1000,
-    valor: 24.60,
+    valor: 24.61,
   },
   {
     id: 7,
@@ -45,7 +45,7 @@ const stocksObj = [
     id: 8,
     nome: 'MULT3',
     quantidade: 1000,
-    valor: 19.50,
+    valor: 19.51,
   },
   {
     id: 9,
