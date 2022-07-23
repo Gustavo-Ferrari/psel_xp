@@ -74,7 +74,9 @@ function Sell() {
         },
       ];
     });
-    setOpenConfirmation(!openConfirmation);
+    if (!isAuthorized) {
+      setOpenConfirmation(false);
+    }
   };
 
   const goBack = () => {
@@ -121,7 +123,7 @@ function Sell() {
         />
       </div>
       {!isAuthorized
-        && <h2 className="notAutorized">Não é possível realizar essa transação, favor revisar os dados inseridos</h2>}
+        && <h2 className="notAutorized">Não é possível vender mais ações do que o consta em carteira</h2>}
       <div className="goBack-btn-container">
         <button className="goBack-btn" type="button" onClick={goBack}>
           Voltar

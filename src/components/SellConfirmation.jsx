@@ -34,6 +34,7 @@ function SellConfirmation({
             onClick={() => {
               sellStock(selectedStock);
               setSellQuantity('');
+              closeConfirmation();
               goBack();
             }}
           >
