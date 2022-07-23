@@ -4,7 +4,7 @@ import context from './context';
 import AppContext from '../Context/AppContext';
 import { Sell } from '../Pages';
 
-const renderBuyPage = () => {
+const renderSellPage = () => {
   renderWithRouter(
     <AppContext.Provider value={context}>
       <Sell />
