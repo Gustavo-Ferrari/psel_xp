@@ -66,6 +66,13 @@ function Login() {
                 onChange={({ target: { value } }) => setPassword(value)}
               />
             </label>
+
+            {isDisabled && (
+              <p className="login-p">
+                Insira um email válido e uma senha de 8 caracteres mínimos
+              </p>
+            )}
+
             <div>
               <button
                 className="login-btn"

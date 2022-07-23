@@ -49,7 +49,7 @@
   font-size: large;
   margin-top: 2em;
   border-radius: .2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   width: 15rem;
   height: 2rem;
   padding: .4em;
@@ -73,6 +73,15 @@
 .login-btn:active:enabled {
   box-shadow: 0 .1rem #666;
   transform: translateY(.1em);
+}
+
+.login-p {
+
+  width: 15em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: white;
+  font-size: medium;
 }
 
 @media (max-width: 1500px) {
