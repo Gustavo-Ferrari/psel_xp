@@ -19,15 +19,21 @@ function Buy() {
 
   const [buyQuantity, setBuyQuantity] = useState('');
   const [isAuthorized, setIsAuthorized] = useState(true);
+  const [funds, setFunds] = useState(true);
+
   const navigate = useNavigate();
 
-  const authorizeTransaction = ({ id, valor }) => {
+  const verifyFunds = ({ valor }) => {
+    if (balance < +valor * +buyQuantity) {
+      return setFunds(false);
+    }
+    return setFunds(true);
+  };
+
+  const authorizeTransaction = ({ id }) => {
     const inventory = parse('stocks');
     const foundStock = inventory.find((el) => el.id === id);
     if (foundStock.quantidade < (+buyQuantity)) {
-      return setIsAuthorized(false);
-    }
-    if (balance < +valor * +buyQuantity) {
       return setIsAuthorized(false);
     }
     return setIsAuthorized(true);
@@ -81,7 +87,7 @@ function Buy() {
         },
       ];
     });
-    setOpenConfirmation(!openConfirmation);
+    setOpenConfirmation(true);
   };
 
   const goBack = () => {
@@ -118,6 +124,7 @@ function Buy() {
           onClick={() => {
             setOpenConfirmation(!openConfirmation);
             authorizeTransaction(selectedStock);
+            verifyFunds(selectedStock);
           }}
         >
           Comprar
@@ -130,15 +137,17 @@ function Buy() {
           placeholder="Digite a quantidade"
         />
       </div>
+      {!funds
+        && <h2 className="notAutorized">Saldo insuficiente</h2>}
       {!isAuthorized
-        && <h2 className="notAutorized">Não é possível realizar essa transação, favor revisar os dados inseridos</h2>}
+        && <h2 className="notAutorized">Não é possível comprar ações acima do estoque disponível</h2>}
       <div className="goBack-btn-container">
         <button className="goBack-btn" type="button" onClick={goBack}>
           Voltar
         </button>
       </div>
       <div>
-        {openConfirmation && buyQuantity && isAuthorized && (
+        {openConfirmation && buyQuantity && isAuthorized && funds && (
           <BuyConfirmation
             updateStock={updateStock}
             closeConfirmation={setOpenConfirmation}

@@ -13,9 +13,10 @@ function Sell() {
     balance,
     setBalance,
     setAllStocks,
+    openConfirmation,
+    setOpenConfirmation,
   } = useContext(AppContext);
 
-  const [openConfirmation, setOpenConfirmation] = useState(false);
   const [sellQuantity, setSellQuantity] = useState('');
   const [isAuthorized, setIsAuthorized] = useState(true);
 

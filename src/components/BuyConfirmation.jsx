@@ -34,6 +34,7 @@ function BuyConfirmation({
             type="button"
             onClick={() => {
               buyStock(selectedStock);
+              closeConfirmation();
               goBack();
             }}
           >
