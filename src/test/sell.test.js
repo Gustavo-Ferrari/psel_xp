@@ -1,19 +1,18 @@
 import { screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../../renderWithRouter';
 import context from './context';
 import AppContext from '../Context/AppContext';
-import { Buy } from '../Pages';
+import { Sell } from '../Pages';
 
 const renderBuyPage = () => {
   renderWithRouter(
     <AppContext.Provider value={context}>
-      <Buy />
+      <Sell />
     </AppContext.Provider>,
   );
 };
 
-describe('Testa elementos da tela de compra', () => {
+describe('Testa elementos da tela de venda', () => {
   it('O HEADER deve ser renderizado', () => {
     renderBuyPage();
     const saldo = screen.getByRole('heading', {
@@ -32,10 +31,10 @@ describe('Testa elementos da tela de compra', () => {
     expect(title).toBeInTheDocument();
   });
 
-  it('O botão de compra deve estar na tela', () => {
+  it('O botão de venda deve estar na tela', () => {
     renderBuyPage();
-    const buyBtn = screen.getByRole('button', { name: /comprar/i });
-    expect(buyBtn).toBeInTheDocument();
+    const sellBtn = screen.getByRole('button', { name: /vender/i });
+    expect(sellBtn).toBeInTheDocument();
   });
 
   it('O botão de voltar deve estar na tela', () => {
@@ -44,7 +43,7 @@ describe('Testa elementos da tela de compra', () => {
     expect(goBackBtn).toBeInTheDocument();
   });
 
-  it('O input de quantidade de compra deve estar na tela', () => {
+  it('O input de quantidade de venda deve estar na tela', () => {
     renderBuyPage();
     const valueInput = screen.getByRole('spinbutton');
     expect(valueInput).toBeInTheDocument();
