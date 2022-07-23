@@ -119,6 +119,7 @@ function Buy() {
       </div>
       <div className="btn-input-container">
         <button
+          disabled={buyQuantity === '' || buyQuantity <= 0}
           className="buy-btn"
           type="button"
           onClick={() => {

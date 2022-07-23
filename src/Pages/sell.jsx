@@ -108,6 +108,7 @@ function Sell() {
       </div>
       <div className="btn-input-container">
         <button
+          disabled={sellQuantity === '' || sellQuantity <= 0}
           className="sell-btn"
           type="button"
           onClick={() => { setOpenConfirmation(!openConfirmation); authorizeTransaction(); }}
