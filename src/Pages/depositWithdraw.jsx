@@ -21,7 +21,8 @@ function DepositWithdraw() {
 
   let isDisable = false;
   let isWithdrawDisable = false;
-  if (balance && addBalance <= 0) isDisable = true;
+  if (balance <= 0) isDisable = true;
+  if (addBalance <= 0) isDisable = true;
   if (addBalance > balance || (balance && addBalance) <= 0) isWithdrawDisable = true;
 
   const deposit = () => {
