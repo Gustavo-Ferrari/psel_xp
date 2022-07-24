@@ -115,11 +115,11 @@ As decisões de lógica de programação tomadas para realização deste projeto
 
    - Ferramentas utilizadas para testes:
 
-   ➡️ Crianção de um renderWithRouter para renderizar os componetes em ambiente de testes.
+  ➡️ Crianção de um renderWithRouter para renderizar os componetes em ambiente de testes.
 
-   ➡️ Biblioteca de testes [React Testting Library](https://testing-library.com/) 🦑
+  ➡️ Biblioteca de testes [React Testting Library](https://testing-library.com/) 🦑
 
-   ➡️ Framework de testes [JEST](https://jestjs.io/pt-BR/) 🃏
+  ➡️ Framework de testes [JEST](https://jestjs.io/pt-BR/) 🃏
 
 </details>
 
