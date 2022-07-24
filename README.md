@@ -126,6 +126,6 @@ As decisões de lógica de programação tomadas para realização deste projeto
 <details>
   <summary><strong>Deploy</strong></summary><br />
   
-   - Para maior facilidade de acesso à aplicação, utilizei o [VERCEL](https://vercel.com/) para dara deploy 🚀
+   - Para maior facilidade de acesso à aplicação, utilizei o [VERCEL](https://vercel.com/) para o deploy 🚀
 
 </details>
