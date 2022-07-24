@@ -68,6 +68,10 @@ As decisões de lógica de programação tomadas para realização deste projeto
   
   - Para acessar o applicativo, o usuário deve informar um e-mail em formato válido e uma senha com, no mínimo, 8 dígitos: 📧🔑
 
+  - Para fins de teste da aplicação, pode-se inserir qualquer email e senha com formato válido.
+
+  - Essa aplicação simula a interação de apenas um usuário com o applicativo.
+
   ➡️ Para validar o formato do e-mail e o tamanho mínimo da senha, utilizei da biblioteca [YUP](https://www.npmjs.com/package/yup);
 
 </details>
@@ -103,6 +107,22 @@ As decisões de lógica de programação tomadas para realização deste projeto
         a impossibilidade de proseguir 🛑
 
 </details>
+
+<details>
+  <summary><strong>Testes unitários e de integração</strong></summary><br />
+  
+   - A fim de monitorar o funcionamento correto do código, testes unitários e de integração foram realizados. 🩺
+
+   - Ferramentas utilizadas para testes:
+
+    ➡️ Crianção de um renderWithRouter para renderizar os componetes em ambiente de testes.
+
+    ➡️ Biblioteca de testes [React Testting Library](https://testing-library.com/) 🦑
+
+    ➡️ Framework de testes [JEST] (https://jestjs.io/pt-BR/) 🃏
+
+</details>
+
 
 <details>
   <summary><strong>Deploy</strong></summary><br />
