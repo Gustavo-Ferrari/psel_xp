@@ -1,6 +1,6 @@
 # Boas vindas à aplicação desenvolvida para o PSel XP - Trybe
 
-Essa aplicação foi desenvolvida por Gustavo Ferrari 🧑‍💻
+Essa aplicação foi desenvolvida por [Gustavo Ferrari](https://www.linkedin.com/in/gustavodferrari/) 🧑‍💻
 
 Esse projeto foi construído com base no pensamento Mobile First, então as telas ficam ~~ainda~~ mais bonitas quando em resolução que simulam um celular 📱
 
