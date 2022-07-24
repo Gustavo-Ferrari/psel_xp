@@ -63,6 +63,7 @@ html {
 
 .table-buy-btn:disabled {
   background-color: lightgrey;
+  color: black
 }
 
 .table-buy-btn:active {
