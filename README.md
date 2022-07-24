@@ -110,7 +110,7 @@ As decisões de lógica de programação tomadas para realização deste projeto
 
 <details>
   <summary><strong>Testes unitários e de integração</strong></summary><br />
-   - A fim de monitorar o funcionamento correto do código, testes unitários e de integração foram realizados. 🩺
+   - A fim de monitorar o funcionamento correto do código, testes unitários e de integração foram realizados. 🩺<br />
 
    - Ferramentas utilizadas para testes:
 
