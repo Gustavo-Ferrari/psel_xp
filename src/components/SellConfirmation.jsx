@@ -17,14 +17,17 @@ function SellConfirmation({
   return (
     <div className="confirmation-background">
       <div className="confirmation-container">
-        <div className="confirmation-title-container">
-          <h1 className="confirmation-title">Deseja confirmar a operação?</h1>
+        <div aria-labelledby="Heading" className="confirmation-title-container">
+          <h1 id="Heading" className="confirmation-title">Deseja confirmar a operação?</h1>
         </div>
         <div className="confirmation-btn-container">
           <button
             className="confirmation-cancel-btn"
             type="button"
-            onClick={() => { closeConfirmation(); setSellQuantity(''); }}
+            onClick={() => {
+              closeConfirmation();
+              setSellQuantity('');
+            }}
           >
             Cancelar
           </button>

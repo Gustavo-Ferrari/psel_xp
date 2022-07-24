@@ -6,8 +6,8 @@ function MyStocks() {
   const stocks = parse('myStocks');
 
   return (
-    <div>
-      <h1 name="myStocks" style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}>Minhas Ações</h1>
+    <div aria-labelledby="Heading">
+      <h1 id="Heading" name="myStocks" style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}>Minhas Ações</h1>
       <StocksTable stocks={stocks} isVisible="none" />
     </div>
   );

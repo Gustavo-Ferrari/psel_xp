@@ -108,7 +108,6 @@ function Sell() {
       </div>
       <div className="btn-input-container">
         <button
-          aria-label="Vender"
           disabled={sellQuantity === '' || sellQuantity <= 0}
           className="sell-btn"
           type="button"
@@ -120,7 +119,6 @@ function Sell() {
           Vender
         </button>
         <input
-          aria-label="input de valor de venda"
           id="sell-input"
           className="sell-input"
           value={sellQuantity}
@@ -136,7 +134,6 @@ function Sell() {
       )}
       <div className="goBack-btn-container">
         <button
-          aria-label="Voltar"
           className="goBack-btn"
           type="button"
           onClick={goBack}

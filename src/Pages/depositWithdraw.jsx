@@ -22,7 +22,7 @@ function DepositWithdraw() {
   let isDisable = false;
   let isWithdrawDisable = false;
   if (addBalance <= 0) isDisable = true;
-  if (addBalance > balance || (balance && addBalance) <= 0) isWithdrawDisable = true;
+  if (addBalance > balance || (balance && addBalance) <= 0) { isWithdrawDisable = true; }
 
   const deposit = () => {
     setBalance(balance + +addBalance);
@@ -31,7 +31,7 @@ function DepositWithdraw() {
   };
 
   const withdraw = () => {
-    if ((balance < (+addBalance - 0.01))) {
+    if (balance < +addBalance - 0.01) {
       return false;
     }
     setBalance(balance - +addBalance);
@@ -42,8 +42,20 @@ function DepositWithdraw() {
     <div>
       <Header />
       <div className="deposit-btn-container">
-        <button className="deposit-btn" type="button" onClick={() => setOpenConfirmation(!openConfirmation)} disabled={isDisable}>Depósito</button>
-        <button className="withdraw-btn" type="button" onClick={() => setOpenWithdrawConfirmation(!openWithdrawConfirmation)} disabled={isWithdrawDisable}>
+        <button
+          className="deposit-btn"
+          type="button"
+          onClick={() => setOpenConfirmation(!openConfirmation)}
+          disabled={isDisable}
+        >
+          Depósito
+        </button>
+        <button
+          className="withdraw-btn"
+          type="button"
+          onClick={() => setOpenWithdrawConfirmation(!openWithdrawConfirmation)}
+          disabled={isWithdrawDisable}
+        >
           Retirada
         </button>
       </div>
@@ -62,18 +74,27 @@ function DepositWithdraw() {
       </div>
       <p className="input-text">Insira o valor e selecione a operação</p>
       <div className="goBack-btn-container">
-        <button className="goBack-btn" type="button" onClick={() => navigate('/acoes')}>Voltar</button>
+        <button
+          className="goBack-btn"
+          type="button"
+          onClick={() => navigate('/acoes')}
+        >
+          Voltar
+        </button>
       </div>
       <div>
-        {openWithdrawConfirmation
-        && (
-        <WithdrawConfirmation
-          closeConfirmation={setOpenWithdrawConfirmation}
-          withdraw={withdraw}
-        />
+        {openWithdrawConfirmation && (
+          <WithdrawConfirmation
+            closeConfirmation={setOpenWithdrawConfirmation}
+            withdraw={withdraw}
+          />
         )}
-        {openConfirmation
-        && <DepositConfirmation closeConfirmation={setOpenConfirmation} deposit={deposit} />}
+        {openConfirmation && (
+          <DepositConfirmation
+            closeConfirmation={setOpenConfirmation}
+            deposit={deposit}
+          />
+        )}
       </div>
     </div>
   );

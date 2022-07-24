@@ -7,8 +7,13 @@ function AllStocks() {
   const [isDisabled] = useState(true);
 
   return (
-    <div>
-      <h1 style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}>Disponíveis para Investir</h1>
+    <div aria-labelledby="Heading">
+      <h1
+        id="Heading"
+        style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}
+      >
+        Disponíveis para Investir
+      </h1>
       <StocksTable stocks={allStocks} isDisabled={isDisabled} />
     </div>
   );

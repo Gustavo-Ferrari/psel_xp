@@ -120,7 +120,6 @@ function Buy() {
       </div>
       <div className="btn-input-container">
         <button
-          aria-label="comprar"
           disabled={buyQuantity === '' || buyQuantity <= 0}
           className="buy-btn"
           type="button"
@@ -133,7 +132,6 @@ function Buy() {
           Comprar
         </button>
         <input
-          aria-label="input de valor de compra"
           id="buy-input"
           className="buy-input"
           value={buyQuantity}
@@ -150,7 +148,6 @@ function Buy() {
       )}
       <div className="goBack-btn-container">
         <button
-          aria-label="Voltar"
           className="goBack-btn"
           type="button"
           onClick={goBack}

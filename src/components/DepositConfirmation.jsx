@@ -8,14 +8,28 @@ function DepositConfirmation({ closeConfirmation, deposit }) {
   return (
     <div className="confirmation-background">
       <div className="confirmation-container">
-        <div className="confirmation-title">
-          <h1>Deseja confirmar a operação?</h1>
+        <div aria-labelledby="Heading" className="confirmation-title">
+          <h1 id="Heading">Deseja confirmar a operação?</h1>
         </div>
         <div className="confirmation-btn-container">
-          <button className="confirmation-cancel-btn" type="button" onClick={() => { closeConfirmation(); setAddBalance(''); }}>
+          <button
+            className="confirmation-cancel-btn"
+            type="button"
+            onClick={() => {
+              closeConfirmation();
+              setAddBalance('');
+            }}
+          >
             Cancelar
           </button>
-          <button className="confirmation-confirm-btn" type="button" onClick={() => { deposit(); setAddBalance(''); }}>
+          <button
+            className="confirmation-confirm-btn"
+            type="button"
+            onClick={() => {
+              deposit();
+              setAddBalance('');
+            }}
+          >
             Confirmar
           </button>
         </div>
