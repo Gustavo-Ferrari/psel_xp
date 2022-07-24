@@ -46,8 +46,8 @@ describe('Testa elementos da tela de compra', () => {
     expect(buyBtn).toBeInTheDocument();
   });
 
-  it('O botão de voltar deve estar na tela', () => {
-    renderWithRouter(
+  it('O botão de voltar deve estar na tela e ao ser clicado deve retornar a tela de acoes', async () => {
+    const { history } = renderWithRouter(
       <AppContext.Provider value={context}>
         <Buy />
       </AppContext.Provider>,
@@ -55,6 +55,10 @@ describe('Testa elementos da tela de compra', () => {
     );
     const goBackBtn = screen.getByRole('button', { name: /voltar/i });
     expect(goBackBtn).toBeInTheDocument();
+    await userEvent.click(goBackBtn);
+    await waitFor(() => {
+      expect(history.location.pathname).toBe('/acoes')
+    });
   });
 
   it('O input de quantidade de compra deve estar na tela', () => {

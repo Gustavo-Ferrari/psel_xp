@@ -24,7 +24,6 @@ const context = {
   setOpenWithdrawConfirmation: jest.fn().mockReturnValue(true),
   setAddBalance: () => {
     context.addBalance = context.addBalance + 1;
-    console.log(context.addBalance);
   },
   selectedStock: { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 },
   stocks: { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 }
