@@ -119,7 +119,7 @@ As decisões de lógica de programação tomadas para realização deste projeto
 
     ➡️ Biblioteca de testes [React Testting Library](https://testing-library.com/) 🦑
 
-    ➡️ Framework de testes [JEST] (https://jestjs.io/pt-BR/) 🃏
+    ➡️ Framework de testes [JEST](https://jestjs.io/pt-BR/) 🃏
 
 </details>
 
