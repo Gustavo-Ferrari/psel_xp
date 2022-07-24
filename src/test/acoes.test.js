@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
-import renderWithRouter from '../../renderWithRouter';
-import context from './context';
+import renderWithRouter from './helpers/renderWithRouter';
+import context from './helpers/context';
 import AppContext from '../Context/AppContext';
 import { Stocks, Buy } from '../Pages';
 
@@ -8,7 +8,7 @@ const renderStocks = () => {
   renderWithRouter(
     <AppContext.Provider value={context}>
       <Stocks />
-    </AppContext.Provider>,
+    </AppContext.Provider>,['/acoes']
   );
 };
 
