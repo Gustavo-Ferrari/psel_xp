@@ -110,15 +110,15 @@ As decisões de lógica de programação tomadas para realização deste projeto
 
 <details>
   <summary><strong>Testes unitários e de integração</strong></summary><br />
-   - A fim de monitorar o funcionamento correto do código, testes unitários e de integração foram realizados. 🩺<br />
-
+   - A fim de monitorar o funcionamento correto do código, testes unitários e de integração foram realizados. 🩺
+  
    - Ferramentas utilizadas para testes:
 
-  ➡️ Crianção de um renderWithRouter para renderizar os componetes em ambiente de testes.
+      ➡️ Crianção de um renderWithRouter para renderizar os componetes em ambiente de testes.
 
-  ➡️ Biblioteca de testes [React Testting Library](https://testing-library.com/) 🦑
+      ➡️ Biblioteca de testes [React Testting Library](https://testing-library.com/) 🦑
 
-  ➡️ Framework de testes [JEST](https://jestjs.io/pt-BR/) 🃏
+      ➡️ Framework de testes [JEST](https://jestjs.io/pt-BR/) 🃏
 
 </details>
 
@@ -129,4 +129,3 @@ As decisões de lógica de programação tomadas para realização deste projeto
    - Para maior facilidade de acesso à aplicação, utilizei o [VERCEL](https://vercel.com/) para dara deploy 🚀
 
 </details>
-
