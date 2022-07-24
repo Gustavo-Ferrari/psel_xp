@@ -82,7 +82,8 @@ StocksTable.propTypes = {
     }),
   ),
   isVisible: PropTypes.string,
-  isDisabled: PropTypes.bool.isRequired,
+  isDisabled: PropTypes.bool,
 };
 StocksTable.defaultProps = { stocks: [] };
 StocksTable.defaultProps = { isVisible: '' };
+StocksTable.defaultProps = { isDisabled: false };
