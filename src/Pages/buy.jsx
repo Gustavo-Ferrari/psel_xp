@@ -131,13 +131,16 @@ function Buy() {
         >
           Comprar
         </button>
-        <input
-          className="buy-input"
-          value={buyQuantity}
-          onChange={({ target: { value } }) => setBuyQuantity(value)}
-          type="number"
-          placeholder="Digite a quantidade"
-        />
+        <label htmlFor="buy-input">
+          <input
+            id="buy-input"
+            className="buy-input"
+            value={buyQuantity}
+            onChange={({ target: { value } }) => setBuyQuantity(value)}
+            type="number"
+            placeholder="Digite a quantidade"
+          />
+        </label>
       </div>
       {!funds && <h2 className="notAutorized">Saldo insuficiente</h2>}
       {!isAuthorized && (
