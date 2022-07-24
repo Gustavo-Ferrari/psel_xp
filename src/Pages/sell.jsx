@@ -108,6 +108,7 @@ function Sell() {
       </div>
       <div className="btn-input-container">
         <button
+          aria-label="Vender"
           disabled={sellQuantity === '' || sellQuantity <= 0}
           className="sell-btn"
           type="button"
@@ -118,16 +119,15 @@ function Sell() {
         >
           Vender
         </button>
-        <label htmlFor="sell-input">
-          <input
-            id="sell-input"
-            className="sell-input"
-            value={sellQuantity}
-            onChange={({ target: { value } }) => setSellQuantity(value)}
-            type="number"
-            placeholder="Digite a quantidade"
-          />
-        </label>
+        <input
+          aria-label="input de valor de venda"
+          id="sell-input"
+          className="sell-input"
+          value={sellQuantity}
+          onChange={({ target: { value } }) => setSellQuantity(value)}
+          type="number"
+          placeholder="Digite a quantidade"
+        />
       </div>
       {!isAuthorized && (
         <h2 className="notAutorized">
@@ -135,7 +135,12 @@ function Sell() {
         </h2>
       )}
       <div className="goBack-btn-container">
-        <button className="goBack-btn" type="button" onClick={goBack}>
+        <button
+          aria-label="Voltar"
+          className="goBack-btn"
+          type="button"
+          onClick={goBack}
+        >
           Voltar
         </button>
       </div>

@@ -120,6 +120,7 @@ function Buy() {
       </div>
       <div className="btn-input-container">
         <button
+          aria-label="comprar"
           disabled={buyQuantity === '' || buyQuantity <= 0}
           className="buy-btn"
           type="button"
@@ -131,16 +132,15 @@ function Buy() {
         >
           Comprar
         </button>
-        <label htmlFor="buy-input">
-          <input
-            id="buy-input"
-            className="buy-input"
-            value={buyQuantity}
-            onChange={({ target: { value } }) => setBuyQuantity(value)}
-            type="number"
-            placeholder="Digite a quantidade"
-          />
-        </label>
+        <input
+          aria-label="input de valor de compra"
+          id="buy-input"
+          className="buy-input"
+          value={buyQuantity}
+          onChange={({ target: { value } }) => setBuyQuantity(value)}
+          type="number"
+          placeholder="Digite a quantidade"
+        />
       </div>
       {!funds && <h2 className="notAutorized">Saldo insuficiente</h2>}
       {!isAuthorized && (
@@ -149,7 +149,12 @@ function Buy() {
         </h2>
       )}
       <div className="goBack-btn-container">
-        <button className="goBack-btn" type="button" onClick={goBack}>
+        <button
+          aria-label="Voltar"
+          className="goBack-btn"
+          type="button"
+          onClick={goBack}
+        >
           Voltar
         </button>
       </div>

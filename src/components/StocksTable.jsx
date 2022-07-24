@@ -40,7 +40,7 @@ function StocksTable({ stocks, isVisible, isDisabled }) {
                     data-testid={stock.id}
                     type="button"
                     className="table-buy-btn"
-                    disabled={balance < stock.valor}
+                    disabled={balance < stock.valor || stock.quantidade <= 0}
                     onClick={() => buy(stock)}
                   >
                     C
