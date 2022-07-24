@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import AppContext from '../Context/AppContext';
 import '../styles/stocksTable.css';
 
-function StocksTable({ stocks, isVisible }) {
+function StocksTable({ stocks, isVisible, isDisabled }) {
   const navigate = useNavigate();
   const { setSelectedStock, balance } = useContext(AppContext);
 
@@ -48,7 +48,7 @@ function StocksTable({ stocks, isVisible }) {
                   <button
                     type="button"
                     className="table-sell-btn"
-                    disabled={stock.quantidade === 0}
+                    disabled={stock.quantidade === 0 || isDisabled}
                     onClick={() => sell(stock)}
                   >
                     V
@@ -82,6 +82,7 @@ StocksTable.propTypes = {
     }),
   ),
   isVisible: PropTypes.string,
+  isDisabled: PropTypes.bool.isRequired,
 };
 StocksTable.defaultProps = { stocks: [] };
 StocksTable.defaultProps = { isVisible: '' };
