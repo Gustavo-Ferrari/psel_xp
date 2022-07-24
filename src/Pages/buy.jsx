@@ -33,7 +33,7 @@ function Buy() {
   const authorizeTransaction = ({ id }) => {
     const inventory = parse('stocks');
     const foundStock = inventory.find((el) => el.id === id);
-    if (foundStock.quantidade < (+buyQuantity)) {
+    if (foundStock.quantidade < +buyQuantity) {
       return setIsAuthorized(false);
     }
     return setIsAuthorized(true);
@@ -54,7 +54,8 @@ function Buy() {
   };
 
   const StockInMyAssetWallet = (stocks, id, valor, foundStock, inventory) => stocks.map((el) => {
-    const transactionApproved = el.id === id && balance >= +valor * +buyQuantity
+    const transactionApproved = el.id === id
+        && balance >= +valor * +buyQuantity
         && foundStock.quantidade >= +buyQuantity;
     if (transactionApproved) {
       setBalance(balance - +valor * +buyQuantity);
@@ -138,10 +139,12 @@ function Buy() {
           placeholder="Digite a quantidade"
         />
       </div>
-      {!funds
-        && <h2 className="notAutorized">Saldo insuficiente</h2>}
-      {!isAuthorized
-        && <h2 className="notAutorized">Não é possível comprar ações acima do estoque disponível</h2>}
+      {!funds && <h2 className="notAutorized">Saldo insuficiente</h2>}
+      {!isAuthorized && (
+        <h2 className="notAutorized">
+          Não é possível comprar ações acima do estoque disponível
+        </h2>
+      )}
       <div className="goBack-btn-container">
         <button className="goBack-btn" type="button" onClick={goBack}>
           Voltar

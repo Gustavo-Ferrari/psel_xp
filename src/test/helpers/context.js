@@ -11,6 +11,7 @@ const context = {
     { id: 9, nome: 'LVBI11', quantidade: 1000, valor: 96.82 },
     { id: 10, nome: 'CPLE6', quantidade: 1000, valor: 18.51 },
   ],
+  inventory: [{ id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 }],
   balance: 1000,
   openCloseEye: true,
   openConfirmation: false,
@@ -19,7 +20,7 @@ const context = {
   setSelectedStock: () => {
     return { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 }
   },
-  setOpenConfirmation: () => true,
+  setOpenConfirmation: jest.fn().mockReturnValue(true),
   selectedStock: { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 },
   stocks: { id: 1, nome: 'CIEL3', quantidade: 1000, valor: 69.98 }
 };
