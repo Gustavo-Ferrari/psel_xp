@@ -48,14 +48,17 @@ function DepositWithdraw() {
         </button>
       </div>
       <div className="deposit-input-container">
-        <input
-          className="deposit-input"
-          value={addBalance}
-          placeholder="Insira o valor"
-          type="number"
-          min={0}
-          onChange={({ target: { value } }) => setAddBalance(value)}
-        />
+        <label htmlFor="deposit-input">
+          <input
+            id="deposit-input"
+            className="deposit-input"
+            value={addBalance}
+            placeholder="Insira o valor"
+            type="number"
+            min={0}
+            onChange={({ target: { value } }) => setAddBalance(value)}
+          />
+        </label>
       </div>
       <p className="input-text">Insira o valor e selecione a operação</p>
       <div className="goBack-btn-container">
