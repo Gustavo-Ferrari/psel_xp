@@ -111,20 +111,29 @@ function Sell() {
           disabled={sellQuantity === '' || sellQuantity <= 0}
           className="sell-btn"
           type="button"
-          onClick={() => { setOpenConfirmation(!openConfirmation); authorizeTransaction(); }}
+          onClick={() => {
+            setOpenConfirmation(!openConfirmation);
+            authorizeTransaction();
+          }}
         >
           Vender
         </button>
-        <input
-          className="sell-input"
-          value={sellQuantity}
-          onChange={({ target: { value } }) => setSellQuantity(value)}
-          type="number"
-          placeholder="Digite a quantidade"
-        />
+        <label htmlFor="sell-input">
+          <input
+            id="sell-input"
+            className="sell-input"
+            value={sellQuantity}
+            onChange={({ target: { value } }) => setSellQuantity(value)}
+            type="number"
+            placeholder="Digite a quantidade"
+          />
+        </label>
       </div>
-      {!isAuthorized
-        && <h2 className="notAutorized">Não é possível vender mais ações do que o consta em carteira</h2>}
+      {!isAuthorized && (
+        <h2 className="notAutorized">
+          Não é possível vender mais ações do que o consta em carteira
+        </h2>
+      )}
       <div className="goBack-btn-container">
         <button className="goBack-btn" type="button" onClick={goBack}>
           Voltar
