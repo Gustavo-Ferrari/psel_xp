@@ -12,7 +12,7 @@ function AllStocks() {
         id="Heading"
         style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}
       >
-        Disponíveis para Investir
+        Available
       </h1>
       <StocksTable stocks={allStocks} isDisabled={isDisabled} />
     </div>

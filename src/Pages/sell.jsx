@@ -86,14 +86,14 @@ function Sell() {
     <div>
       <Header />
       <div>
-        <h1 style={{ textAlign: 'center' }}>Comprar/Vender Ação</h1>
+        <h1 style={{ textAlign: 'center' }}>Buy/Sell Stock</h1>
         <div className="table-container">
           <table className="table">
             <thead>
               <tr>
-                <th>Ação</th>
-                <th>Qtde</th>
-                <th>Valor (R$)</th>
+                <th>Stock</th>
+                <th>Qty</th>
+                <th>Value (R$)</th>
               </tr>
             </thead>
             <tbody>
@@ -116,7 +116,7 @@ function Sell() {
             authorizeTransaction();
           }}
         >
-          Vender
+          Sell
         </button>
         <input
           id="sell-input"
@@ -124,12 +124,12 @@ function Sell() {
           value={sellQuantity}
           onChange={({ target: { value } }) => setSellQuantity(value)}
           type="number"
-          placeholder="Digite a quantidade"
+          placeholder="Amount"
         />
       </div>
       {!isAuthorized && (
         <h2 className="notAutorized">
-          Não é possível vender mais ações do que o consta em carteira
+          It is not possible to sell more shares than is in the portfolio
         </h2>
       )}
       <div className="goBack-btn-container">
@@ -138,7 +138,7 @@ function Sell() {
           type="button"
           onClick={goBack}
         >
-          Voltar
+          Back
         </button>
       </div>
       <div>

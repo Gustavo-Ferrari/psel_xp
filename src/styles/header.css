@@ -28,12 +28,6 @@
   box-shadow: .1em .1em #999;
 }
 
-.balance-container {
-  padding: 1em;
-  background-color: grey;
-  margin-bottom: 1em;
-}
-
 .balance-p {
   width: fit-content;
   margin: 0 auto;
@@ -47,11 +41,23 @@
   box-shadow: .1em .1em #666;
 }
 
+.balance-container {
+  padding: 1em;
+  background-color: grey;
+  margin-bottom: 1em;
+  position: relative;
+}
+
 .eye-btn-container {
   text-align: right;
 }
 
 .eye-btn {
+  width: 7em;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
   border-radius: .5em;
   background-color: #ffc709;
   box-shadow: .2em .2em #666;
@@ -85,7 +91,7 @@
     margin-right: 2em;
   }
   .eye-btn {
-    width: 5em;
+    width: 7em;
     height: 2em;
     font-size: medium;
   }

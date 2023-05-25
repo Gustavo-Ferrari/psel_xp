@@ -98,14 +98,14 @@ function Buy() {
     <div>
       <Header />
       <div>
-        <h1 style={{ textAlign: 'center' }}>Comprar/Vender Ação</h1>
+        <h1 style={{ textAlign: 'center' }}>Buy/Sell Stock</h1>
         <div className="table-container">
           <table className="table">
             <thead>
               <tr>
-                <th>Ação</th>
-                <th>Qtde</th>
-                <th>Valor (R$)</th>
+                <th>Stock</th>
+                <th>Qty</th>
+                <th>Price (R$)</th>
               </tr>
             </thead>
             <tbody>
@@ -129,7 +129,7 @@ function Buy() {
             verifyFunds(selectedStock);
           }}
         >
-          Comprar
+          Buy
         </button>
         <input
           id="buy-input"
@@ -137,13 +137,13 @@ function Buy() {
           value={buyQuantity}
           onChange={({ target: { value } }) => setBuyQuantity(value)}
           type="number"
-          placeholder="Digite a quantidade"
+          placeholder="Amount"
         />
       </div>
-      {!funds && <h2 className="notAutorized">Saldo insuficiente</h2>}
+      {!funds && <h2 className="notAutorized">Insufficient funds</h2>}
       {!isAuthorized && (
         <h2 className="notAutorized">
-          Não é possível comprar ações acima do estoque disponível
+          It is not possible to buy shares above the available stock
         </h2>
       )}
       <div className="goBack-btn-container">
@@ -152,7 +152,7 @@ function Buy() {
           type="button"
           onClick={goBack}
         >
-          Voltar
+          Back
         </button>
       </div>
       <div>

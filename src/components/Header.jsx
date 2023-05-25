@@ -26,14 +26,14 @@ function Header() {
       <div className="balance-container">
         <div className="eye-btn-container">
           <button className="eye-btn" onClick={openClose} type="button">
-            👁 Saldo
+            👁 Balance
           </button>
         </div>
         {openCloseEye && (
           <h1 className="balance-p">
             {parsedBalance === null
-              ? 'Saldo em conta: R$ 0'
-              : `Saldo em conta: ${toBRL}`}
+              ? 'Balance: R$ 0'
+              : `Balance: ${toBRL}`}
           </h1>
         )}
       </div>

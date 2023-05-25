@@ -88,3 +88,11 @@
     background-color: #00000000;
   }
 }
+
+.test {
+  border-radius: .3em;
+  padding: 0 1em;
+  margin-top: 1em;
+  text-align: center;
+  background-color: #ffc709;
+}

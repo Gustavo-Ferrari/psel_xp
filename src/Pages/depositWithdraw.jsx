@@ -48,7 +48,7 @@ function DepositWithdraw() {
           onClick={() => setOpenConfirmation(!openConfirmation)}
           disabled={isDisable}
         >
-          Depósito
+          Deposit
         </button>
         <button
           className="withdraw-btn"
@@ -56,7 +56,7 @@ function DepositWithdraw() {
           onClick={() => setOpenWithdrawConfirmation(!openWithdrawConfirmation)}
           disabled={isWithdrawDisable}
         >
-          Retirada
+          Withdraw
         </button>
       </div>
       <div className="deposit-input-container">
@@ -65,21 +65,21 @@ function DepositWithdraw() {
             id="deposit-input"
             className="deposit-input"
             value={addBalance}
-            placeholder="Insira o valor"
+            placeholder="Value"
             type="number"
             min={0}
             onChange={({ target: { value } }) => setAddBalance(value)}
           />
         </label>
       </div>
-      <p className="input-text">Insira o valor e selecione a operação</p>
+      <p className="input-text">Type the value and the choose the operation</p>
       <div className="goBack-btn-container">
         <button
           className="goBack-btn"
           type="button"
           onClick={() => navigate('/acoes')}
         >
-          Voltar
+          Back
         </button>
       </div>
       <div>

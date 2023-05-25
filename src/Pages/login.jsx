@@ -39,57 +39,62 @@ function Login() {
   };
 
   return (
-    <div>
-      <form onSubmit={loginButtonFunc}>
-        <div className="main-container">
-          <div className="login-container">
-            <div className="login-card">
-              <img className="xp-logo" src={XPlogo} alt="xp-logo" />
-              <label htmlFor="email">
-                <input
-                  className="email-input"
-                  name="email-input"
-                  type="email"
-                  id="email"
-                  placeholder="seuEmail.com"
-                  value={email}
-                  onChange={({ target: { value } }) => setEmail(value)}
-                />
-              </label>
-              <label htmlFor="password">
-                <input
-                  className="password-input"
-                  name="password-input"
-                  type="password"
-                  id="password"
-                  placeholder="Senha (8 digitos)"
-                  value={password}
-                  onChange={({ target: { value } }) => setPassword(value)}
-                />
-              </label>
-              {isDisabled && (
-                <p className="login-p">
-                  Insira um email válido e uma senha de 8 caracteres mínimos
-                </p>
-              )}
-              <div>
-                <button
-                  aria-labelledby="Acessar"
-                  className="login-btn"
-                  onClick={loginButtonFunc}
-                  disabled={isDisabled}
-                  name="login-button"
-                  type="submit"
-                >
-                  Acessar
-                </button>
-              </div>
+    <form onSubmit={loginButtonFunc}>
+      <div className="main-container">
+        <div className="login-container">
+          <div className="login-card">
+            <img className="xp-logo" src={XPlogo} alt="xp-logo" />
+            <label htmlFor="email">
+              <input
+                className="email-input"
+                name="email-input"
+                type="email"
+                id="email"
+                placeholder="yourEmail.com"
+                value={email}
+                onChange={({ target: { value } }) => setEmail(value)}
+              />
+            </label>
+            <label htmlFor="password">
+              <input
+                className="password-input"
+                name="password-input"
+                type="password"
+                id="password"
+                placeholder="Password (8 digits)"
+                value={password}
+                onChange={({ target: { value } }) => setPassword(value)}
+              />
+            </label>
+            {isDisabled && (
+              <p className="login-p">
+                Enter a valid email and a password of at least 8 characters
+              </p>
+            )}
+            <div>
+              <button
+                aria-labelledby="Acessar"
+                className="login-btn"
+                onClick={loginButtonFunc}
+                disabled={isDisabled}
+                name="login-button"
+                type="submit"
+              >
+                Log in
+              </button>
+            </div>
+            <div className="test">
+              <p>
+                Developt as graduation project: Work in Progress
+              </p>
+              <p>
+                ©Gustavo Ferrari, 2022.
+              </p>
             </div>
           </div>
         </div>
-      </form>
-      <p>©Gustavo Ferrari, 2022. Educational project: a work in progress</p>
-    </div>
+      </div>
+    </form>
   );
 }
 

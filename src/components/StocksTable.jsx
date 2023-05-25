@@ -23,10 +23,10 @@ function StocksTable({ stocks, isVisible, isDisabled }) {
         <table className="table">
           <thead className="table-header">
             <tr className="table-header-rows">
-              <th>Ação</th>
-              <th>Qtde</th>
-              <th>Valor (R$)</th>
-              <th>Negociar</th>
+              <th>Stock</th>
+              <th>Qty</th>
+              <th>Value(R$)</th>
+              <th>Trade</th>
             </tr>
           </thead>
           <tbody className="table-body">
@@ -66,7 +66,7 @@ function StocksTable({ stocks, isVisible, isDisabled }) {
           style={{ display: isVisible }}
           onClick={() => navigate('/deposito')}
         >
-          Depósito/Retirada
+          Deposit/Withdrawal
         </button>
       </div>
     </>

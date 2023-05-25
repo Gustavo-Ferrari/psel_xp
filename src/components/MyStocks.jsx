@@ -7,7 +7,7 @@ function MyStocks() {
 
   return (
     <div aria-labelledby="Heading">
-      <h1 id="Heading" name="myStocks" style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}>Minhas Ações</h1>
+      <h1 id="Heading" name="myStocks" style={{ backgroundColor: 'grey', margin: '.5em', textAlign: 'center' }}>My Stocks</h1>
       <StocksTable stocks={stocks} isVisible="none" />
     </div>
   );

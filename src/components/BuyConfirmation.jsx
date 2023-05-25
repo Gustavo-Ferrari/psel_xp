@@ -13,7 +13,7 @@ function BuyConfirmation({ closeConfirmation, buyStock, selectedStock }) {
     <div className="confirmation-background">
       <div className="confirmation-container">
         <div aria-labelledby="Heading" className="confirmation-title">
-          <h1 id="Heading">Deseja confirmar a operação?</h1>
+          <h1 id="Heading">Confirm?</h1>
         </div>
         <div className="confirmation-btn-container">
           <button
@@ -23,7 +23,7 @@ function BuyConfirmation({ closeConfirmation, buyStock, selectedStock }) {
               closeConfirmation();
             }}
           >
-            Cancelar
+            Cancel
           </button>
           <button
             className="confirmation-confirm-btn"
@@ -34,7 +34,7 @@ function BuyConfirmation({ closeConfirmation, buyStock, selectedStock }) {
               goBack();
             }}
           >
-            Confirmar
+            Confirm
           </button>
         </div>
       </div>
